@@ -18,6 +18,8 @@ ChartMon is a Python application designed to visualize telemetry data from Prese
 
 3. **CPU vs GPU Active Time**: This chart shows the percentage of time the CPU and GPU are active. It can help identify which component is the bottleneck. For example, if the CPU is active 90% of the time and the GPU is active only 10%, it's likely that the CPU is the bottleneck.
 
+4. **Performance per Watt **: Analyzing performance per watt for both cpu and gpu if available
+
 ## Why These Charts are Useful
 
 These charts are particularly useful for identifying bottlenecks in a system's performance. By analyzing these charts, you can determine whether your CPU, GPU, or some other component is the limiting factor in your setup. This can guide you on what to upgrade in your system for better performance.

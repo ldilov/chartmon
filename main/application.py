@@ -49,10 +49,6 @@ class Application:
 
         # CPU Active Time % Trace
         self.plot_builder.add_trace(x=time_in_seconds, y=cpu_percentage,
-                                    labels={
-                                        "time_in_seconds": "Seconds",
-                                        "cpu_percentage": "CPU Active Time %",
-                                    },
                                     fill='tonexty',
                                     fillcolor='rgba(0,100,80,0.5)',
                                     line=dict(color='rgba(0,100,80,1)'),
@@ -60,10 +56,6 @@ class Application:
 
         # GPU Active Time % Trace
         self.plot_builder.add_trace(x=time_in_seconds, y=gpu_percentage,
-                                    labels={
-                                        "time_in_seconds": "Seconds",
-                                        "gpu_percentage": "GPU Active Time %",
-                                    },
                                     fill='tonexty',
                                     fillcolor='rgba(0,176,246,0.5)',
                                     line=dict(color='rgba(0,176,246,1)'),
@@ -79,11 +71,7 @@ class Application:
             x=time_in_seconds,
             y=fps,
             mode='lines',
-            name='FPS',
-            labels={
-                "time_in_seconds": "Seconds",
-                "fps": "FPS",
-            }, row=1, col=1)
+            name='FPS', row=1, col=1)
 
         # Frametime subplot
         self.plot_builder.add_trace(
@@ -91,10 +79,6 @@ class Application:
             y=ms_between_presents,
             mode='lines',
             name='Frametime',
-            labels={
-                "time_in_seconds": "Seconds",
-                "ms_between_presents": "Frametime",
-            },
             row=2, col=1)
 
         # Load additional columns for new metrics
