@@ -72,6 +72,8 @@ You can run the application in two ways:
 2. **GUI:**
     Simply run the application and a file dialog will appear for you to select the CSV file.
 
+ ![Sample](https://raw.githubusercontent.com/ldilov/chartmon/main/sample.png)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
