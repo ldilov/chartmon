@@ -100,25 +100,9 @@ class Application:
         cpu_thermal_headroom = DataProcessor.calculate_thermal_headroom(cpu_temperature)
 
         # Add new traces for the new metrics
-        self.plot_builder.add_trace(x=time_in_seconds, y=gpu_performance_per_watt, mode='lines', labels={
-            "time_in_seconds": "Seconds",
-            "gpu_performance_per_watt": "Performance/Watt",
-        },
-                                    name='GPU Performance/Watt', row=4, col=1)
-        self.plot_builder.add_trace(x=time_in_seconds, y=cpu_performance_per_watt, mode='lines', labels={
-            "time_in_seconds": "Seconds",
-            "cpu_performance_per_watt": "Performance/Watt",
-        },
-                                    name='CPU Performance/Watt', row=5, col=1)
-        self.plot_builder.add_trace(x=time_in_seconds, y=gpu_thermal_headroom, mode='lines', labels={
-            "time_in_seconds": "Seconds",
-            "gpu_thermal_headroom": "Thermal Headroom",
-        },
-                                    name='GPU Thermal Headroom', row=6, col=1)
-        self.plot_builder.add_trace(x=time_in_seconds, y=cpu_thermal_headroom, mode='lines', labels={
-            "time_in_seconds": "Seconds",
-            "cpu_thermal_headroom": "Thermal Headroom",
-        },
-                                    name='CPU Thermal Headroom', row=7, col=1)
+        self.plot_builder.add_trace(x=time_in_seconds, y=gpu_performance_per_watt, mode='lines', name='GPU Performance/Watt', row=4, col=1)
+        self.plot_builder.add_trace(x=time_in_seconds, y=cpu_performance_per_watt, mode='lines', name='CPU Performance/Watt', row=5, col=1)
+        self.plot_builder.add_trace(x=time_in_seconds, y=gpu_thermal_headroom, mode='lines', name='GPU Thermal Headroom', row=6, col=1)
+        self.plot_builder.add_trace(x=time_in_seconds, y=cpu_thermal_headroom, mode='lines', name='CPU Thermal Headroom', row=7, col=1)
 
         self.plot_builder.show_plot()
